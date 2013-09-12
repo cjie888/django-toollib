@@ -6,7 +6,6 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from django.template import Context
-from django.shortcuts import render_to_response
 
 
 
@@ -20,28 +19,27 @@ def send_mail(subject, body, to, cc, use_thread=True):
     else:
         _send_mail(subject, body, to, cc)
 
-def send_html_template_email(subject, template_name, data, to_addresses, cc, use_thread=True):
+def send_html_template_email(subject, template_name, data, to, cc, use_thread=True):
     if use_thread:
         thread = threading.Thread(target=_send_html_template_email,
                                   name="send_email_cli",
-                                  args=(subject, template_name, data, to_addresses, cc))
+                                  args=(subject, template_name, data, to, cc))
         thread.setDaemon(True)
         thread.start()
     else:
-        _send_html_template_email(subject, template_name, data, to_addresses, cc)
+        _send_html_template_email(subject, template_name, data, to, cc)
 
-def _send_mail(subject, msg, to_addresses, cc):
+def _send_mail(subject, msg, to, cc):
 
-    message = EmailMessage(subject, msg, settings.EMAIL_FROM, to_addresses, [], cc=cc)
+    message = EmailMessage(subject, msg, settings.EMAIL_FROM, to, [], cc=cc)
     message.send()
 
-def _send_html_template_email(subject, template_name, data, to_addresses, cc):
+def _send_html_template_email(subject, template_name, data, to, cc):
     
     html_template    = get_template(template_name)
     content = Context(data)
     html_content = html_template.render(content)
-    #html_content = render_to_response( template_name ,  data)
 
-    message = EmailMultiAlternatives(subject, html_content, to=to_addresses)
+    message = EmailMultiAlternatives(subject, html_content, to=to)
     message.attach_alternative(html_content, "text/html")
     message.send()
