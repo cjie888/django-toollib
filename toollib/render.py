@@ -9,16 +9,18 @@ from django.conf import settings
 def render_json(view_func):
     """make return value to be json"""
     def wrap(request, *args, **kwargs):
-        retval = view_func(request, *args, **kwargs)
+        response = None
+        
+        retval = view_func(request, *args, **kwargs)        
         if isinstance(retval, HttpResponse):
-            retval.mimetype = 'application/json'
-            retval['Cache-Control'] = 'no-cache'
-            return retval
+            response = retval
         else:
             json = simplejson.dumps(retval)
-            response = HttpResponse(json, mimetype='application/json')
-            response['Cache-Control'] = 'no-cache'
-            return response
+            response = HttpResponse(json)
+
+        response.mimetype = 'application/json'
+        response['Cache-Control'] = 'no-cache' 
+        return response
     return wrap
 
 
