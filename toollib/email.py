@@ -22,7 +22,7 @@ def send_mail(subject, body, to, cc, use_thread=True):
 def send_html_template_email(subject, template_name, data, to, cc, use_thread=True):
     if use_thread:
         thread = threading.Thread(target=_send_html_template_email,
-                                  name="send_email_cli",
+                                  name="send_template_email_cli",
                                   args=(subject, template_name, data, to, cc))
         thread.setDaemon(True)
         thread.start()
@@ -36,10 +36,10 @@ def _send_mail(subject, msg, to, cc):
 
 def _send_html_template_email(subject, template_name, data, to, cc):
     
-    html_template    = get_template(template_name)
+    html_template = get_template(template_name)
     content = Context(data)
     html_content = html_template.render(content)
 
-    message = EmailMultiAlternatives(subject, html_content, to=to)
+    message = EmailMultiAlternatives(subject, html_content, settings.EMAIL_FROM, to=to)
     message.attach_alternative(html_content, "text/html")
     message.send()
