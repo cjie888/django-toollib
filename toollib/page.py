@@ -10,5 +10,5 @@ def get_page(query_set, page_no, page_size):
         page = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
-        page = paginator.page(paginator.num_pages)
+        page = paginator.page(1)
     return page
