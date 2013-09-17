@@ -24,7 +24,7 @@ def render_json(view_func):
     return wrap
 
 
-def render_template(template, kwargs={}, request=None):
+def render_template(template, request, **kwargs):
     new_kwargs = {"settings": settings}
     if "settings" in kwargs:
         kwargs.pop("settings")
