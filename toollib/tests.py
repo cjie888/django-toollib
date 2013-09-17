@@ -105,7 +105,7 @@ class PageTestCases(TestCase):
     def test_get_page_out_page(self):
         query_set = ['data1', 'data2', 'data3', 'data4']
         page = get_page(query_set, 3, 3)
-        self.assertEqual(page.number, 2)
-        self.assertEqual(page.start_index(), 4)
-        self.assertEqual(page.end_index(), 4)
-        self.assertEqual(page.object_list, ['data4'])
+        self.assertEqual(page.number, 1)
+        self.assertEqual(page.start_index(), 1)
+        self.assertEqual(page.end_index(), 3)
+        self.assertEqual(page.object_list, ['data1', 'data2', 'data3'])
