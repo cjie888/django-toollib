@@ -9,10 +9,10 @@ Programing interface:
 send_mail(subject, body, to, cc, use_thread=True) </pre> <br/>
 Parameters: 
 <pre>
-subject - the email subject <br/>
-body  - the email body <br/>
-to - the recipients (a list) <br/>
-cc - (a list) <br/>
+subject - the email subject
+body  - the email body
+to - the recipients (a list)
+cc - (a list)
 use_thread - whether to start a thread to send email </pre> <br/>
 <br/>
 A simple example demonstrating the use of the programmatic interface:
@@ -27,8 +27,8 @@ Programing interface:
 send_html_template_email(subject, template_name, data, to, cc, use_thread=True)</pre> <br/>
 Parameters: 
 <pre>
-template_name - the email template <br/>
-data  - the data render the template(a dictionary) <br/>
+template_name - the email template
+data  - the data render the template(a dictionary)
 the parameters of subject, to, cc, use_thread is the same as sending noraml email.</pre> <br/>
 <br/>            
 A simple example demonstrating the use of the programmatic interface:
