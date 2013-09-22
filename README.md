@@ -4,7 +4,9 @@ Django-toollib is a common module building on top of django, include sending ema
 <br/>
 * Sending normal email  <br/>
 <br/>
-Programing interface: <pre> send_mail(subject, body, to, cc, use_thread=True)</pre> <br/>
+Programing interface: 
+<pre>
+send_mail(subject, body, to, cc, use_thread=True) </pre> <br/>
 Parameters: 
 <pre>
 subject - the email subject <br/>
