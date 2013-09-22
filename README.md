@@ -37,7 +37,7 @@ send_html_template_email("template_subject_not_use_thread", 'email.html', {'user
 </pre>
 ### Rendering template and json <br/>
 * render json <br/>
-
+It is a decorator which wrapping the json or data to http response.
 * render template  <br/>
 <br/>
 Programing interface:
