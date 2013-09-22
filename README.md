@@ -5,7 +5,7 @@ Django-toollib is a common module building on top of django, include sending ema
 <br/>
 Programing interface: 
 <pre>
-send_mail(subject, body, to, cc, use_thread=True) </pre> <br/>
+send_mail(subject, body, to, cc, use_thread=True) </pre>
 Parameters: 
 <pre>
 subject - the email subject
@@ -23,7 +23,7 @@ send_mail("subject_not_use_thread", "body_not_use_thread", ["xxx@funshion.com"],
 <br/>
 Programing interface:
 <pre> 
-send_html_template_email(subject, template_name, data, to, cc, use_thread=True)</pre> <br/>
+send_html_template_email(subject, template_name, data, to, cc, use_thread=True)</pre>
 Parameters: 
 <pre>
 template_name - the email template
@@ -33,7 +33,7 @@ the parameters of subject, to, cc, use_thread is the same as sending noraml emai
 A simple example demonstrating the use of the programmatic interface:
 <pre>
 from toollib.email import send_html_template_email
- send_html_template_email("template_subject_not_use_thread", 'email.html', {'username':'test'}, ["xxx@funshion.com"], [], False)
+send_html_template_email("template_subject_not_use_thread", 'email.html', {'username':'test'}, ["xxx@funshion.com"], [], False)
 </pre>
 ### Rendering template and json <br/>
 * render json <br/>
@@ -42,7 +42,7 @@ from toollib.email import send_html_template_email
 <br/>
 Programing interface:
 <pre> 
-render_template(template, request, **kwargs)</pre> <br/>
+render_template(template, request, **kwargs)</pre>
 Parameters: 
 <pre>
 template - the template name
@@ -58,7 +58,7 @@ response = render_template('email.html', None, username = 'render_test')
 <br/>
 Programing interface:
 <pre> 
-get_page(query_set, page_no, page_size)</pre> <br/>
+get_page(query_set, page_no, page_size)</pre>
 Parameters: 
 <pre>
 query_set - the query set
