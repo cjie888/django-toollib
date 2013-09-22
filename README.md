@@ -2,7 +2,8 @@ Django-toollib is a common module building on top of django, include sending ema
 
 ### Sending Email
 
-* Sending normal email 
+* Sending normal email  <br/>
+<br/>
 Programing interface: send_mail(subject, body, to, cc, use_thread=True) <br/>
 Parameters: subject - the email subject <br/>
             body  - the email body <br/>
@@ -15,6 +16,7 @@ A simple example demonstrating the use of the programmatic interface:
 send_mail("subject_not_use_thread", "body_not_use_thread", ["xxx@funshion.com"], [], False)
 </pre>
 * Sending html template email <br/>
+<br/>
 Programing interface: send_html_template_email(subject, template_name, data, to, cc, use_thread=True) <br/>
 Parameters: template_name - the email template <br/>
             data  - the data render the template(a dictionary) <br/>
@@ -26,8 +28,8 @@ A simple example demonstrating the use of the programmatic interface:
 </pre>
 ### Rendering template and json
 
-* render json
+* render json <br/>
 
-* render template
+* render template  <br/>
 
 ### Pagination 
