@@ -11,7 +11,7 @@ Parameters:
 subject - the email subject
 body  - the email body
 to - the recipients (a list)
-cc - (a list)
+cc - copy to(a list)
 use_thread - whether to start a thread to send email </pre> <br/>
 <br/>
 A simple example demonstrating the use of the programmatic interface:
