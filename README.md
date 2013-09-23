@@ -1,6 +1,6 @@
 Django-toollib is a common module building on top of django, include sending email, rendering template, pagination etc. 
 
-### Sending Email ### <br/>
+### Sending Email <br/>
 * Sending normal email  <br/>
 <br/>
 Programing interface: 
@@ -35,7 +35,7 @@ A simple example demonstrating the use of the programmatic interface:
 from toollib.email import send_html_template_email
 send_html_template_email("template_subject_not_use_thread", 'email.html', {'username':'test'}, ["xxx@funshion.com"], [], False)
 </pre>
-### Rendering template and json ### <br/>
+### Rendering template and json <br/>
 * render json <br/>
 It is a decorator which wrapping the json or data to http response.
 * render template  <br/>
@@ -54,7 +54,7 @@ A simple example demonstrating the use of the programmatic interface:
 from toollib.render import render_template
 response = render_template('email.html', None, username = 'render_test')
 </pre>
-### Pagination ### <br/>
+### Pagination <br/>
 <br/>
 Programing interface:
 <pre> 
