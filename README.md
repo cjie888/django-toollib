@@ -70,6 +70,6 @@ page_size - the page size of every page</pre> <br/>
 A simple example demonstrating the use of the programmatic interface:
 <pre>
 from toollib.page import get_page
-query_set = ['data1', 'data2', 'data3', 'data4', 'data5', 'data6', 'data7']
+query_set = MyModel.objects.all()
 page = get_page(query_set, 2, 3)
 </pre>
