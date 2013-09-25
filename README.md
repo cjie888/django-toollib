@@ -1,6 +1,15 @@
 Django-toollib is a common module building on top of django, include sending email, rendering template, pagination etc. 
 
 ### Sending Email <br/>
+You should change the email configuration in setting.py file first.
+<pre>
+EMAIL_HOST = "mail.XXXXX.com"
+EMAIL_HOST_USER = "email_user"
+EMAIL_HOST_PASSWORD = "email_password"
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+EMAIL_FROM = "email_from"
+</pre>
 * Sending normal email  <br/>
 <br/>
 Programing interface: 
