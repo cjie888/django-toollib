@@ -81,17 +81,17 @@ use jquery:
 
 ### Advanced Configuration
 * Generators and modifiers <br/>
-1. Random chars <br/>
+1.     Random chars <br/>
 Classic captcha that picks four random chars. This is case insensitive.
 <pre>
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
 </pre>
-2. Simple Math <br/><li>
+2.     Simple Math <br/><li>
 Another classic, that challenges the user to resolve a simple math challenge by randomly picking two numbers between one and nine, and a random operator among plus, minus, times.
 <pre>
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
 </pre>
-3. Dictionary Word  <br/>
+3.     Dictionary Word  <br/>
 Picks a random word from a dictionary file. Note, you must define CAPTCHA_WORDS_DICTIONARY in your cofiguration to use this generator.
 <pre>
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.word_challenge'
