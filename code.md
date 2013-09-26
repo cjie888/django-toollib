@@ -39,7 +39,9 @@ def home(request):
         form = VerificationCodeForm()
     return render_template('home.html', request, form=form)
 </pre>
+
 ### Define url
+
 * Add entries in your urls.py file like this:
 <pre>
     url(r'^code/$', 'views.home'),
@@ -47,7 +49,9 @@ def home(request):
     url(r'code/image/(?P<key>\w+)/$','captcha.views.captcha_image',name='verificationcode-image'),
     url(r'code/new/key/$','toollib.verificationcode.captcha_new_key',name='verificationcode-new-key'),
 </pre>
+
 ### use field in the form
+
 <pre>
 	<form action="." method="post">
 		{% csrf_token %} {{form.verificationcode.errors}} {{form.verificationcode}}
@@ -55,7 +59,9 @@ def home(request):
 		<input type="submit" value="Submit" />
 	</form>
 </pre>
+
 ### use ajax to refresh <br>
+
 use jquery: 
 <pre>
 		function refresh_image() {
@@ -69,4 +75,6 @@ use jquery:
 			});
 		};
 </pre>
+
 ### Advanced Configuration
+
