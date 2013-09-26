@@ -33,7 +33,7 @@ class VerificationCodeTextInput(BaseCaptchaTextInput):
     def render(self, name, value, attrs=None):
         self.fetch_captcha_store(name, value, attrs)
 
-        self.image_and_audio = '<img src="%s" alt="captcha" class="captcha" />' % self.image_url()
+        self.image_and_audio = '<img src="%s" alt="verificationcode" class="verificationcode" />' % self.image_url()
         if settings.CAPTCHA_FLITE_PATH:
             self.image_and_audio = '<a href="%s" title="%s">%s</a>' % (self.audio_url(), ugettext('Play CAPTCHA as audio file'), self.image_and_audio)
 
