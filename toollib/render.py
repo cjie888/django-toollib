@@ -13,12 +13,12 @@ def render_json(view_func):
         
         retval = view_func(request, *args, **kwargs)        
         if isinstance(retval, HttpResponse):
+            retval.mimetype = 'application/json'
             response = retval
         else:
             json = simplejson.dumps(retval)
-            response = HttpResponse(json)
+            response = HttpResponse(json, mimetype='application/json')
 
-        response.mimetype = 'application/json'
         response['Cache-Control'] = 'no-cache' 
         return response
     return wrap
