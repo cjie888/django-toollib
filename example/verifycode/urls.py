@@ -5,10 +5,10 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'views.home'),
-    url(r'^captcha/', include('captcha.urls')),
-    url(r'image/(?P<key>\w+)/$','captcha.views.captcha_image',name='captcha-image'),
-    url(r'new/key/$','toollib.verificationcode.captcha_new_key',name='captcha-new-key'),
+    url(r'^code/$', 'views.home'),
+    url(r'^code/captcha/', include('captcha.urls')),
+    url(r'code/image/(?P<key>\w+)/$','captcha.views.captcha_image',name='verificationcode-image'),
+    url(r'code/new/key/$','toollib.verificationcode.captcha_new_key',name='verificationcode-new-key'),
     # Examples:
     # url(r'^$', 'verifycode.views.home', name='home'),
     # url(r'^verifycode/', include('verifycode.foo.urls')),
