@@ -1,5 +1,5 @@
 This module is based on project [django-simple-captcha](https://github.com/mbi/django-simple-captcha)  is an extremely simple,
-yet highly customizable Django application to add captcha images to any Django form. We increase function image ajax refresh,  field custom etc. 
+yet highly customizable Django application to add captcha images to any Django form. We increase function -- image ajax refresh,  field custom etc. 
 
 ### Install django-simple-captcha
 This projct is rely on django-simple-captcha, so you should install it first.
@@ -45,7 +45,7 @@ def home(request):
 
 ### Define url
 
-* Add entries in your urls.py file like this:
+Add entries in your urls.py file like this:
 <pre>
     url(r'^code/$', 'views.home'),
     url(r'^code/captcha/', include('captcha.urls')),
