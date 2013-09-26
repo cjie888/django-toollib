@@ -1,7 +1,7 @@
 This module is based on project [django-simple-captcha](https://github.com/mbi/django-simple-captcha) which is an extremely simple,
 yet highly customizable Django application to add captcha images to any Django form. We increase function -- image ajax refresh,  field custom etc. 
 
-### Install django-simple-captcha
+### Install django-simple-captcha 
 This projct is rely on django-simple-captcha, so you should install it first.
 
 * Download django-simple-captcha using pip by running: pip install django-simple-captcha
@@ -10,10 +10,10 @@ This projct is rely on django-simple-captcha, so you should install it first.
 
 * Run python manage.py syncdb (or python manage.py migrate if you are managing databae migrations via South) to create the required database tables
 
-### Adding to a Form
+### Adding to a Form 
 Using a VerificationCodeField is quite straight-forward:
 
-* Define the Form <br>
+* Define the Form <br/>
 To embed a verification code in your forms, simply add a VerificationCodeField to the form definition:
 <pre>
 from django import forms
@@ -24,7 +24,7 @@ class VerificationCodeForm(forms.Form):
     verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"class": "test"}))
 </pre>
 
-* Validate the Form
+* Validate the Form <br/>
 In your view, validate the form as usually: if the user didn’t provide a valid response to the verification code challenge, the form will raise a ValidationError:
 <pre>
 from django.http import HttpResponseRedirect
