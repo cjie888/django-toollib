@@ -80,7 +80,7 @@ use jquery:
 </pre>
 
 ### Advanced Configuration
-1. Generators and modifiers <br/>
+#### Generators and modifiers <br/>
     1. Random chars <br/>
 Classic captcha that picks four random chars. This is case insensitive.
 <pre>
