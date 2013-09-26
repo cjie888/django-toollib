@@ -1,4 +1,4 @@
-This module is based on project [django-simple-captcha](https://github.com/mbi/django-simple-captcha)  is an extremely simple,
+This module is based on project [django-simple-captcha](https://github.com/mbi/django-simple-captcha) which is an extremely simple,
 yet highly customizable Django application to add captcha images to any Django form. We increase function -- image ajax refresh,  field custom etc. 
 
 ### Install django-simple-captcha
@@ -80,4 +80,20 @@ use jquery:
 </pre>
 
 ### Advanced Configuration
+* Generators and modifiers <br/>
+** Random chars <br/>
+Classic captcha that picks four random chars. This is case insensitive.
+<pre>
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
+</pre>
+** Simple Math <br/>
+Another classic, that challenges the user to resolve a simple math challenge by randomly picking two numbers between one and nine, and a random operator among plus, minus, times.
+<pre>
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
+</pre>
+**  Dictionary Word  <br/>
+Picks a random word from a dictionary file. Note, you must define CAPTCHA_WORDS_DICTIONARY in your cofiguration to use this generator.
+<pre>
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.word_challenge'
+</pre>
 
