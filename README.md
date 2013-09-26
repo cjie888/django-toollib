@@ -1,4 +1,4 @@
-Django-toollib is a common module building on top of django, include sending email, rendering template, pagination etc. 
+Django-toollib is a common module building on top of django, include sending email, rendering template, pagination, verification code etc. 
 
 ### Sending Email <br/>
 You should change the email configuration in setting.py file first.
@@ -82,3 +82,4 @@ from toollib.page import get_page
 query_set = MyModel.objects.all()
 page = get_page(query_set, 2, 3)
 </pre>
+### [Verification Code](code.md) <br/>
