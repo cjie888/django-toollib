@@ -43,7 +43,7 @@ def home(request):
     return render_template('home.html', request, form=form)
 </pre>
 
-### Define url
+### Define Django Url
 
 Add entries in your urls.py file like this:
 <pre>
@@ -53,7 +53,7 @@ Add entries in your urls.py file like this:
     url(r'code/new/key/$','toollib.verificationcode.captcha_new_key',name='verificationcode-new-key'),
 </pre>
 
-### use field in the form
+### Use Field in the Form
 
 <pre>
 	&lt;form action="." method="post"&gt;
@@ -63,7 +63,7 @@ Add entries in your urls.py file like this:
 	&lt;/form&gt;
 </pre>
 
-### use ajax to refresh <br>
+### Use Ajax to Refresh Image <br>
 
 use jquery: 
 <pre>
