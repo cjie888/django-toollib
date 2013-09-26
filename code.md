@@ -18,10 +18,12 @@ To embed a verification code in your forms, simply add a VerificationCodeField t
 <pre>
 from django import forms
 from toollib.verificationcode  import VerificationCodeField, VerificationCodeTextInput
-
+</pre>
+<pre>
 class VerificationCodeForm(forms.Form):
     verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"class": "test"}))
 </pre>
+
 * Validate the Form
 In your view, validate the form as usually: if the user didn’t provide a valid response to the verification code challenge, the form will raise a ValidationError:
 <pre>
@@ -29,7 +31,8 @@ from django.http import HttpResponseRedirect
 from forms import VerificationCodeForm
 from toollib.render import render_template
 from toollib.render import render_json
-
+</pre>
+<pre>
 def home(request):
     if request.POST:
         form = VerificationCodeForm(request.POST)
@@ -53,11 +56,11 @@ def home(request):
 ### use field in the form
 
 <pre>
-	<form action="." method="post">
+	&lt;form action="." method="post"&gt;
 		{% csrf_token %} {{form.verificationcode.errors}} {{form.verificationcode}}
-		<input type="button" id="js-verificationcode-refresh" value="change" />
-		<input type="submit" value="Submit" />
-	</form>
+		&lt;input type="button" id="js-verificationcode-refresh" value="change" /&gt;
+		&lt;input type="submit" value="Submit" /&gt;
+	&lt;/form&gt;
 </pre>
 
 ### use ajax to refresh <br>
