@@ -26,7 +26,7 @@ use_thread - whether to start a thread to send email </pre> <br/>
 A simple example demonstrating the use of the programmatic interface:
 <pre>
 from toollib.email import send_mail
-send_mail("subject_not_use_thread", "body_not_use_thread", ["xxx@funshion.com"], [], False)
+send_mail("subject_not_use_thread", "body_not_use_thread", ["xxx@domain.com"], [], False)
 </pre>
 * Sending html template email <br/>
 <br/>
@@ -42,7 +42,7 @@ the parameters of subject, to, cc, use_thread is the same as sending noraml emai
 A simple example demonstrating the use of the programmatic interface:
 <pre>
 from toollib.email import send_html_template_email
-send_html_template_email("template_subject_not_use_thread", 'email.html', {'username':'test'}, ["xxx@funshion.com"], [], False)
+send_html_template_email("template_subject_not_use_thread", 'email.html', {'username':'test'}, ["xxx@domain.com"], [], False)
 </pre>
 
 ### Rendering template and json <br/>
