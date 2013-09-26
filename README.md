@@ -57,8 +57,7 @@ Parameters:
 <pre>
 template - the template name
 request - the http request
-kwargs - the template parameter</pre> <br/>
-<br/>            
+kwargs - the template parameter</pre> <br/>           
 A simple example demonstrating the use of the programmatic interface:
 <pre>
 from toollib.render import render_template
