@@ -67,16 +67,16 @@ Add entries in your urls.py file like this:
 
 use jquery: 
 <pre>
-		function refresh_image() {
-			$.get('{% url "captcha-new-key" %}', function(data) {
-                                alert(data);
-				var image_url = '{% url "captcha-image"  0 %}';
-				image_url = image_url.replace('/0', '/' + data);
-				$('#id_captcha_image').attr('src', image_url);
-				$('#id_captcha_0').val(data);
-				$('#id_captcha_1').val('');
+		$(document).ready(function() {
+			$('#js-verificationcode-refresh').click(function () {
+				$.get('{% url "verificationcode-new-key" %}', function(data) {
+					var image_url = '{% url "verificationcode-image"  0 %}';
+					image_url = image_url.replace('/0', '/' + data);
+					$('.verificationcode').attr('src', image_url);
+				});
 			});
-		};
+		});
+
 </pre>
 
 ### Advanced Configuration
