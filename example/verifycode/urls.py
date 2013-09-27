@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     url(r'^code/$', 'views.home'),
     url(r'^code/captcha/', include('captcha.urls')),
     url(r'code/image/(?P<key>\w+)/$','captcha.views.captcha_image',name='verificationcode-image'),
-    url(r'code/new/key/$','toollib.verificationcode.captcha_new_key',name='verificationcode-new-key'),
+    url(r'code/new/key/$','toollib.verificationcode.code_new_key',name='verificationcode-new-key'),
     # Examples:
     # url(r'^$', 'verifycode.views.home', name='home'),
     # url(r'^verifycode/', include('verifycode.foo.urls')),

@@ -82,7 +82,7 @@ class VerificationCodeField(MultiValueField):
                 raise ValidationError(getattr(self, 'error_messages', {}).get('invalid', ugettext_lazy('Invalid CAPTCHA')))
         return value
 
-def captcha_new_key(request):
+def code_new_key(request):
     challenge, response = settings.get_challenge()()
     store = CaptchaStore.objects.create(challenge=challenge, response=response)
     return HttpResponse(store.hashkey)
