@@ -82,4 +82,18 @@ from toollib.page import get_page
 query_set = MyModel.objects.all()
 page = get_page(query_set, 2, 3)
 </pre>
+### Get Client(user) IP Address <br/>
+A simple example demonstrating the use of the programmatic interface:
+<pre>
+from toollib.client import get_client_ip
+clinet_ip = get_client_ip(request)
+</pre>
+If you use nginx as a proxy, you should add configuration in nginx.conf.
+<pre>
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</pre>
+If you use haproxy as a proxy, you should add configuration in haproxy.cfg.
+<pre>
+option forwardfor
+</pre>
 ### [Verification Code](code.md) <br/>
