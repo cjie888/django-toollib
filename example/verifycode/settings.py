@@ -158,5 +158,5 @@ LOGGING = {
     }
 }
 
-CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.word_challenge'
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
 CAPTCHA_FOREGROUND_COLOR = 'red'
