@@ -90,12 +90,12 @@ Foreground-color of the captcha. Defaults to '#001100'
 Font-size in pixels of the rendered text.Defaults to ‘22’.
 * CAPTCHA_LENGTH
 Sets the length, in chars, of the generated captcha. (for the 'captcha.helpers.random_char_challenge' challenge) Defaults to: 4
-#### input field style <br/>
+#### text field style <br/>
 You can change it with constructing filed.
 <pre>
 verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"style": "height: 28px;"}))
 </pre>
-or use css style:
+or use css class:
 <pre>
 verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"class": "test"}))
 </pre>
