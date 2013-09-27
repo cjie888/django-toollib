@@ -79,7 +79,7 @@ use jquery:
 
 </pre>
 
-### Change Image and input field Style <br/>
+### Change Image and text input field Style <br/>
 #### image config
 * CAPTCHA_BACKGROUND_COLOR <br/>
 Background-color of the captcha. Can be expressed as html-style #rrggbb, rgb(red, green, blue), or common html names (e.g. “red”).
