@@ -9,6 +9,7 @@ This projct is rely on django-simple-captcha, so you should install it first.
 * Add captcha to the INSTALLED_APPS in your settings.py
 
 * Run python manage.py syncdb (or python manage.py migrate if you are managing databae migrations via South) to create the required database tables
+Note: If in windows, you should install PIL 1.1.7, http://www.pythonware.com/products/pil/.
 
 ### Adding to a Form 
 Using a VerificationCodeField is quite straight-forward:
@@ -30,7 +31,6 @@ In your view, validate the form as usually: if the user didn’t provide a valid
 from django.http import HttpResponseRedirect
 from forms import VerificationCodeForm
 from toollib.render import render_template
-from toollib.render import render_json
 </pre>
 <pre>
 def home(request):
