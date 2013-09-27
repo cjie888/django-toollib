@@ -79,9 +79,18 @@ use jquery:
 
 </pre>
 
+### Change Image and input field Style <br/>
+#### image config
+* CAPTCHA_BACKGROUND_COLOR
+Background-color of the captcha. Can be expressed as html-style #rrggbb, rgb(red, green, blue), or common html names (e.g. “red”).
+Defaults to: '#ffffff'
+* CAPTCHA_FOREGROUND_COLOR
+Foreground-color of the captcha. Defaults to '#001100'
+* CAPTCHA_FONT_SIZE
+Font-size in pixels of the rendered text.Defaults to ‘22’.
+
 ### Advanced Configuration
 #### Generators and modifiers <br/>
-
 * Random chars <br/>
 Classic captcha that picks four random chars. This is case insensitive.
 <pre>
@@ -97,4 +106,5 @@ Picks a random word from a dictionary file. Note, you must define CAPTCHA_WORDS_
 <pre>
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.word_challenge'
 </pre>
+
 
