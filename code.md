@@ -88,6 +88,17 @@ Defaults to: '#ffffff'
 Foreground-color of the captcha. Defaults to '#001100'
 * CAPTCHA_FONT_SIZE
 Font-size in pixels of the rendered text.Defaults to ‘22’.
+* CAPTCHA_LENGTH
+Sets the length, in chars, of the generated captcha. (for the 'captcha.helpers.random_char_challenge' challenge) Defaults to: 4
+#### input field style <br/>
+You can change it with constructing filed.
+<pre>
+verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"style": "height: 28px;"}))
+</pre>
+or use css style:
+<pre>
+verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"class": "test"}))
+</pre>
 
 ### Advanced Configuration
 #### Generators and modifiers <br/>
@@ -106,5 +117,6 @@ Picks a random word from a dictionary file. Note, you must define CAPTCHA_WORDS_
 <pre>
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.word_challenge'
 </pre>
+
 
 
