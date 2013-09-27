@@ -81,15 +81,16 @@ use jquery:
 
 ### Change Image and input field Style <br/>
 #### image config
-* CAPTCHA_BACKGROUND_COLOR
+* CAPTCHA_BACKGROUND_COLOR <br/>
 Background-color of the captcha. Can be expressed as html-style #rrggbb, rgb(red, green, blue), or common html names (e.g. “red”).
 Defaults to: '#ffffff'
-* CAPTCHA_FOREGROUND_COLOR
+* CAPTCHA_FOREGROUND_COLOR <br/>
 Foreground-color of the captcha. Defaults to '#001100'
-* CAPTCHA_FONT_SIZE
+* CAPTCHA_FONT_SIZE <br/>
 Font-size in pixels of the rendered text.Defaults to ‘22’.
-* CAPTCHA_LENGTH
+* CAPTCHA_LENGTH <br/>
 Sets the length, in chars, of the generated captcha. (for the 'captcha.helpers.random_char_challenge' challenge) Defaults to: 4
+
 #### text field style <br/>
 You can change it with constructing filed.
 <pre>
