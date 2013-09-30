@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from django.core.exceptions import ImproperlyConfigured
 from django.forms.fields import CharField, MultiValueField
 from django.utils.translation import ugettext, ugettext_lazy
