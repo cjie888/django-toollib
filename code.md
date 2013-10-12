@@ -105,7 +105,7 @@ Specify your own output format for the generated markup, when e.g. you want to p
 Defaults to: <pre>u'%(image)s %(hidden_field)s %(text_field)s'</pre>
 You can change like this:
 <pre>
-CAPTCHA_OUTPUT_FORMAT = u'%(image)s %(hidden_field)s <input type="button" id="js-verificationcode-refresh" value="refresh" /> %(text_field)s'
+CAPTCHA_OUTPUT_FORMAT = u'%(image)s %(hidden_field)s &lt;input type="button" id="js-verificationcode-refresh" value="refresh" /&gt; %(text_field)s'
 </pre>
 ### Advanced Configuration
 #### Generators and modifiers <br/>
