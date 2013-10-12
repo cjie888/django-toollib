@@ -5,7 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^code/$', 'views.home'),
+    url(r'^code/$', 'verifycode.views.home'),
     url(r'^code/captcha/', include('captcha.urls')),
     url(r'code/image/(?P<key>\w+)/$','captcha.views.captcha_image',name='verificationcode-image'),
     url(r'code/new/key/$','toollib.verificationcode.code_new_key',name='verificationcode-new-key'),
