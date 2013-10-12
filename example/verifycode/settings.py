@@ -159,6 +159,6 @@ LOGGING = {
         },
     }
 }
-CAPTCHA_OUTPUT_FORMAT = u'%(image)s %(hidden_field)s <input type="button" id="js-verificationcode-refresh" value="看不清" /> %(text_field)s'
+CAPTCHA_OUTPUT_FORMAT = u'%(image)s %(hidden_field)s <input type="button" id="js-verificationcode-refresh" value="refresh" /> %(text_field)s'
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
 CAPTCHA_FOREGROUND_COLOR = 'red'
