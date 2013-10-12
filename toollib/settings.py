@@ -21,6 +21,19 @@ TEMPLATE_DIRS = (
 )
 SECRET_KEY = '8l&amp;)jd(qf-7u==4lt4lz8emk8+2(8+5x4a$xu7g7ijgn#=p$ma'
 
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'toollib',
+    # Uncomment the next line to enable the admin:
+    # 'django.contrib.admin',
+    # Uncomment the next line to enable admin documentation:
+    # 'django.contrib.admindocs',
+)
 #email config
 EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
 EMAIL_HOST = "mail.funshion.com"
