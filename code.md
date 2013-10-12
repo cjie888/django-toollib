@@ -100,7 +100,13 @@ or use css class:
 <pre>
 verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"class": "test"}))
 </pre>
-
+#### CAPTCHA_OUTPUT_FORMAT
+Specify your own output format for the generated markup, when e.g. you want to position the captcha image relative to the text field in your form.
+Defaults to: u'%(image)s %(hidden_field)s %(text_field)s'
+You can change like this:
+<pre>
+CAPTCHA_OUTPUT_FORMAT = u'%(image)s %(hidden_field)s <input type="button" id="js-verificationcode-refresh" value="refresh" /> %(text_field)s'
+</pre>
 ### Advanced Configuration
 #### Generators and modifiers <br/>
 * Random chars <br/>

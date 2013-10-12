@@ -5,8 +5,8 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#js-verificationcode-refresh').click(function () {
-				$.get('{% url "verificationcode-new-key" %}', function(data) {
-					var image_url = '{% url "verificationcode-image"  0 %}';
+				$.get('{% url verificationcode-new-key %}', function(data) {
+					var image_url = '{% url verificationcode-image 0 %}';
 					image_url = image_url.replace('/0', '/' + data);
 					$('.verificationcode').attr('src', image_url);
 				});
@@ -20,7 +20,6 @@
 
 	<form action="." method="post">
 		{% csrf_token %} {{form.verificationcode.errors}} {{form.verificationcode}}
-		<input type="button" id="js-verificationcode-refresh" value="change" />
 		<input type="submit" value="Submit" />
 	</form>
 </body>
