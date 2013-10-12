@@ -102,7 +102,7 @@ verificationcode = VerificationCodeField(widget=VerificationCodeTextInput({"clas
 </pre>
 #### CAPTCHA_OUTPUT_FORMAT
 Specify your own output format for the generated markup, when e.g. you want to position the captcha image relative to the text field in your form.
-Defaults to: u'%(image)s %(hidden_field)s %(text_field)s'
+Defaults to: <pre>u'%(image)s %(hidden_field)s %(text_field)s'</pre>
 You can change like this:
 <pre>
 CAPTCHA_OUTPUT_FORMAT = u'%(image)s %(hidden_field)s <input type="button" id="js-verificationcode-refresh" value="refresh" /> %(text_field)s'
