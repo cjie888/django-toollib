@@ -31,14 +31,14 @@ class EmailTestCases(TestCase):
         send_html_template_email("template_subject_not_use_thread", 'email.html', {'username':'test'}, ["hucj@funshion.com"], [], False)
         self.assertEquals(len(mail.outbox), 1)
         self.assertEquals(mail.outbox[0].subject, 'template_subject_not_use_thread')
-        self.assertEquals(mail.outbox[0].body, u'<html>\r\n<body>\r\nhello <strong>test</strong>\r\nyour account activated.\r\n</body>\r\n</html>')
+        self.assertEquals(mail.outbox[0].body, u'<html>\n<body>\nhello <strong>test</strong>\nyour account activated.\n</body>\n</html>')
 
     def test_send_html_template_email_use_thread(self):
         send_html_template_email("template_subject_use_thread", 'email.html', {'username':'test_use_thread'}, ["hucj@funshion.com"], [], True)
         time.sleep(1)
         self.assertEquals(len(mail.outbox), 1)
         self.assertEquals(mail.outbox[0].subject, 'template_subject_use_thread')
-        self.assertEquals(mail.outbox[0].body, u'<html>\r\n<body>\r\nhello <strong>test_use_thread</strong>\r\nyour account activated.\r\n</body>\r\n</html>')
+        self.assertEquals(mail.outbox[0].body, u'<html>\n<body>\nhello <strong>test_use_thread</strong>\nyour account activated.\n</body>\n</html>')
 
 class RenderTestCases(TestCase):
     """test render
@@ -49,7 +49,7 @@ class RenderTestCases(TestCase):
     
     def test_render_template(self):
         response = render_template('email.html', None, username = 'render_test')
-        self.assertEquals(response.content, '<html>\r\n<body>\r\nhello <strong>render_test</strong>\r\nyour account activated.\r\n</body>\r\n</html>')
+        self.assertEquals(response.content, '<html>\n<body>\nhello <strong>render_test</strong>\nyour account activated.\n</body>\n</html>')
 class PageTestCases(TestCase):
     """test render
 
