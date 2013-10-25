@@ -16,10 +16,10 @@
 	</script>
 </head>
 <body>
-
-
 	<form action="." method="post">
 		{% csrf_token %} {{form.verificationcode.errors}} {{form.verificationcode}}
-		<input type="submit" value="Submit" />
+		<div class="form-action">
+			<input type="submit" class="btn btn-primary" value="submit"/>
+		</div>
 	</form>
 </body>
